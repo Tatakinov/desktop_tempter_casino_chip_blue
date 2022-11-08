@@ -21,7 +21,7 @@ AI.PreFlop {
     _h2_num   = TOINT(SUBSTR(TH.hand[1], 1, 2))
     _vs_allin = 0
     // 条件式を楽に書けるようにするためのswap。
-    if (_h2_num == 1 || h1_num < h2_num) {
+    if (_h2_num == 1 || _h1_num < _h2_num) {
         _tmp  = _h1_num
         _h1_num = _h2_num
         _h2_num = _tmp
@@ -75,7 +75,7 @@ AI.PreFlop {
     }
     // ベット額が高すぎる場合は一部の強い手を除いて降りる。
     elseif (TH.blind * 5 < TH.current_bet) {
-        if (vs_allin == 0) {
+        if (_vs_allin == 0) {
             _ret  = IARRAY()
             _ret  ,= "fold"
         }
