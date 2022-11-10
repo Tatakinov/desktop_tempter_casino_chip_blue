@@ -174,12 +174,12 @@ AI.Turn {
         if (ARRAYSIZE(_list) > 0) {
             _sum  = 0
             foreach _list; _e {
-                _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.n_players, TH.hand[0], TH.hand[1], _e, "N0"))
+                _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.community[3], TH.n_players, TH.hand[0], TH.hand[1], _e, "N0"))
             }
         }
     }
     if (_rate < 0) {
-        _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.n_players, TH.hand[0], TH.hand[1]))
+        _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.community[3], TH.n_players, TH.hand[0], TH.hand[1]))
     }
     if (_strength > TH.strength) {
         TH.strength = _strength
@@ -223,12 +223,12 @@ AI.River {
         if (ARRAYSIZE(_list) > 0) {
             _sum  = 0
             foreach _list; _e {
-                _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.n_players, TH.hand[0], TH.hand[1], _e, "N0"))
+                _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.community[3], TH.community[4], TH.n_players, TH.hand[0], TH.hand[1], _e, "N0"))
             }
         }
     }
     if (_rate < 0) {
-        _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.n_players, TH.hand[0], TH.hand[1]))
+        _rate = TOREAL(FUNCTIONEX("saori\TexasHoldemUtil\TexasHoldemUtil.dll", "estimate", ARRAYSIZE(TH.community), TH.community[0], TH.community[1], TH.community[2], TH.community[3], TH.community[4], TH.n_players, TH.hand[0], TH.hand[1]))
     }
     if (_strength > TH.strength) {
         TH.strength = _strength
